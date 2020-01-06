@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentProfile"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView_Profile_Username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textStyle="bold|italic"
+        android:textAllCaps="true"
+        android:textSize="50sp"
+        android:layout_margin="10dp"/>
+
+    <ImageView
+        android:id="@+id/imageView_Profile_ProfilePicture"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:src="@mipmap/ic_launcher"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_Profile_ChangeProfilePicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/change_profile_picture"/>
+
+        <Button
+            android:id="@+id/button_Profile_ChangePassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/change_password"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editText_Profile_Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:inputType="textPassword"
+        android:hint="@string/password"
+        android:importantForAutofill="no"
+        android:visibility="invisible"/>
+
+    <EditText
+        android:id="@+id/editText_Profile_PasswordAgain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:inputType="textPassword"
+        android:hint="@string/password_again"
+        android:importantForAutofill="no"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkBox_Profile_ShowPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:checked="false"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/textView_Profile_ShowPasswordLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/show_password"
+            android:layout_margin="10dp"
+            android:labelFor="@+id/checkBox_Profile_ShowPassword"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_Profile_Save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:textAlignment="center"
+        android:visibility="invisible"/>
+
+</LinearLayout>
